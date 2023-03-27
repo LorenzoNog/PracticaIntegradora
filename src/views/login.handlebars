@@ -1,0 +1,27 @@
+<h1 class="title">
+  Login
+</h1>
+
+<form class="form" action="/users/login" method="post" id="form">
+  Email:
+  <input type="email" name="email" class="input" />
+  Contrasenia:<input type="password" name="password" class="input" />
+  <button type="submit" id="btnLogin" class="btn">
+    Login
+  </button>
+</form>
+
+{{!-- <div class="containerButton">
+  <button type="submit" style="margin-top:20px ;" class="btn">
+    Logearse con github
+  </button>
+</div> --}}
+
+<h2 class="title">
+  USUARIO NUEVO?
+</h2>
+<div class="containerButton">
+  <button type="submit" onclick="location.href='/registro'" class="btn">
+    Registrarse
+  </button>
+</div>

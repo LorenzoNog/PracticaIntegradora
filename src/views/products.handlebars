@@ -1,0 +1,48 @@
+
+<h1>
+    Bienvenido <span style="color: rgb(45, 45, 196);">{{firstName}} {{lastname}}</span> 
+</h1>
+<p>
+    <strong>Email: </strong><span style="color: rgb(45, 45, 196);">{{email}}</span>
+</p>
+<p>
+    <strong>Rol: </strong><span style="color: rgb(45, 45, 196);">{{role}}</span> 
+</p>
+<button onclick="location.href='/users/logout'">
+    LOGOUT
+</button>
+
+<div id="containerProducts">
+    {{#each products}}
+        <div class="containerProduct">
+            <h2 class="title">
+                {{title}}
+            </h2>
+            <div class="data">
+                <p class="descripcion">
+                    {{description}}
+                </p>
+                <p class="precio">
+                    {{price}}
+                </p>
+                <p class="code">
+                    {{code}}
+                </p>
+                <p class="status">
+                    {{status}}
+                </p>
+                <p class="category">
+                    {{category}}
+                </p>
+                <p class="id">
+                    id:{{_id}}
+                </p>
+            </div>
+            <form method="post" action="http://localhost:8080/api/cart/640f365cfc12b2cdb5089f77/products/{{_id}}">
+                <button class="addToCart" type="submit">
+                    Agregar al carrito
+                </button>
+            </form>
+        </div>
+    {{/each}}
+</div>

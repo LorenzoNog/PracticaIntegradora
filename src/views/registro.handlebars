@@ -1,0 +1,27 @@
+<h1 class="title">
+  Registro
+</h1>
+<div class="formRegistro">
+  <form action="/users/registro" method="post" class="form">
+    Nombre:
+    <input type="text" name="firstName" id="firstName" class="input" />
+    Apellido :
+    <input type="text" name="lastName" id="lastName" class="input" />
+    Email:
+    <input type="email" name="email" id="email" class="input" />
+    Edad:
+    <input type="number" name="age" id="age" class="input" />
+    Contrasenia:
+    <input type="password" name="password" id="password" class="input" />
+    <button type="submit" onclick="location.href='/'" class="btn">
+      Registrarse
+    </button>
+  </form>
+
+  <div class="containerButton" style="margin-top: 20px;">
+    <button type="submit" class="btn">
+      Registrarse con github
+    </button>
+  </div>
+
+</div>
